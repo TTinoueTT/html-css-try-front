@@ -7,6 +7,8 @@ node_modules
 .env
 dist
 .DS_Store
-.local/state/*
-.local/share/*
+
+.local
+# .local/state/*
+# .local/share/*
 .ash_history

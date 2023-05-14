@@ -24,6 +24,8 @@ WORKDIR ${HOME}
 EXPOSE ${CONTAINER_PORT}
 
 RUN npm install -g pnpm
+# RUN pnpm --version
+# RUN npx pnpm install -g pnpm
 
 # RUN pnpm dlx nuxi init app
 
