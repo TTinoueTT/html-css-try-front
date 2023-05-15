@@ -41,10 +41,21 @@ npm run preview
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
+参考記事: <https://reffect.co.jp/vue/nuxt3>
 
-参考記事: https://reffect.co.jp/vue/nuxt3
 ## ファイル、ディレクトリ構成について
+
+## 命名規則
+
+|     | 記法 | 例  | 補足 |
+| --- | ---- | --- | ---- |
+|.vueファイル名|ケバブケース|user-list.vue|      |
+|コンポーネント|ケバブケース|`<user-list />`| |
+|関数名|キャメルケース|useRoute() <br> getMetadata() | ・名前は `動詞 + 目的語 + 修飾子`となる。<br> ・修飾子は必要であれば |
+|html内の属性名|ケバブケース|class="user-list" <br> :class="user-llist"| |
+
 ### app.vue ファイルについて
+>
 > app.vueファイルはNuxt 3のメインコンポーネント。
 > 複数のページを作成する場合はpagesディレクトリを利用しますがpagesディレクトリはオプションなので必ず利用する必要はありません。
 > ランディングページのみ、ルーティングが必要ないアプリケーションの場合は、app.vueファイルを利用するだけでアプリケーションを構築することができます。
@@ -52,18 +63,22 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 > クライアントが受け取るデータ量も減るためページの表示速度の高速化につながります。
 
 #### NuxtWelcome コンポーネント
+>
 > [nuxt/assets](https://github.com/nuxt/assets/tree/main/packages/templates/templates/welcome)
 
-
 ### app.vue 以外のファイル
+
 - nuxt.config.ts    … Nuxtに関する設定を行う
 - tsconfig.json     … TypeScript の設定ファイル
 
 ### componentsディレクトリ
+>
 > コンポーネントファイルを保存。Auto Imports機能によりimoprt文を利用しなくても自動でコンポーネントのimportが行われる
 
 │┬┴ ┼├ ┤└ ┘┌ ┐
+
 ### pagesディレクトリ
+>
 > app.vueファイルだけでアプリケーションを構築することができる(SPAなどのページ遷移しない実装)
 > しかし、複数ページで構成するアプリケーションが通常必要になってくるので、ページを追加したい場合は
 > pagesディレクトリを利用する。
@@ -78,12 +93,9 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 </template>
 ```
 
-
 ```:pagesディレクトリ構成
 /pages ─┐
         ├ html-css-try
 ```
-
-
 
 `localhost:8030/`

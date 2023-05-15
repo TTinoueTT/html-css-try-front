@@ -10,5 +10,5 @@ dist
 
 .local
 # .local/state/*
-# .local/share/*
+.local/share/pnpm/store/v3/files/*
 .ash_history
